@@ -1,6 +1,6 @@
 # WEDE5020 ST10277796 EPHRAIM KITWANGA
 ## Overview
-EPK Landscaping was founded with a simple vision: to create beautiful, sustainable outdoor environments that enhance both property value and quality of life
+EPK Landscaping is a made up Business founded with a simple vision: to create beautiful, sustainable outdoor environments that enhance both property value and quality of life
 - Home
 - Services
 - About
