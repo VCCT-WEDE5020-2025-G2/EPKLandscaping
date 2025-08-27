@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Prevent caching to always show latest version -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>EPK Landscaping - Portfolio</title>
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <!-- Navigation bar -->
         <nav>
             <div class="logo">
+                <!-- Logo / site name -->
                 <h1>🌱 EPK Landscaping</h1>
             </div>
             <ul class="nav-links">
+                <!-- Navigation links -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,18 +31,22 @@
     </header>
 
     <main>
+        <!-- Back to home button -->
         <div class="back-to-home">
             <a href="index.html" class="btn secondary">← Back to Home</a>
         </div>
 
+        <!-- Page header -->
         <section class="page-header">
             <h1>Our Portfolio</h1>
             <p>Check out some of our completed landscaping projects</p>
         </section>
 
+        <!-- Portfolio filters -->
         <section class="portfolio-filters">
             <h2>Project Categories</h2>
             <div class="filter-buttons">
+                <!-- Filter buttons for portfolio -->
                 <button class="filter-btn active" onclick="showAll()">All Projects</button>
                 <button class="filter-btn" onclick="filterProjects('residential')">Residential</button>
                 <button class="filter-btn" onclick="filterProjects('commercial')">Commercial</button>
@@ -46,8 +55,10 @@
             </div>
         </section>
 
+        <!-- Portfolio gallery -->
         <section class="portfolio-gallery">
             <div class="project-grid">
+                <!-- Individual project cards -->
                 <div class="project-card" data-category="residential garden">
                     <div class="project-image">🏠</div>
                     <div class="project-info">
@@ -139,10 +150,12 @@
                 </div>
             </div>
         </section>
-        <!--Testimonials-->
+
+        <!-- Testimonials section -->
         <section class="testimonials">
             <h2>What Our Clients Say</h2>
             <div class="testimonials-grid">
+                <!-- Individual testimonial -->
                 <div class="testimonial">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p>"EPK Landscaping transformed our backyard into an amazing outdoor living space. The quality exceeded our expectations."</p>
@@ -164,6 +177,7 @@
             </div>
         </section>
 
+        <!-- Call-to-action section -->
         <section class="cta">
             <h2>Inspired by Our Work?</h2>
             <p>Let's create something beautiful for your property!</p>
@@ -174,6 +188,7 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -192,30 +207,33 @@
         </div>
     </footer>
 
+    <!-- JavaScript for portfolio filtering -->
     <script>
+        // Show all projects
         function showAll() {
             const projects = document.querySelectorAll('.project-card');
             const buttons = document.querySelectorAll('.filter-btn');
             
-            projects.forEach(project => project.style.display = 'block');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            buttons[0].classList.add('active');
+            projects.forEach(project => project.style.display = 'block'); // show all projects
+            buttons.forEach(btn => btn.classList.remove('active')); // reset buttons
+            buttons[0].classList.add('active'); // highlight "All Projects"
         }
 
+        // Filter projects by category
         function filterProjects(category) {
             const projects = document.querySelectorAll('.project-card');
             const buttons = document.querySelectorAll('.filter-btn');
             
             projects.forEach(project => {
                 if (project.dataset.category.includes(category)) {
-                    project.style.display = 'block';
+                    project.style.display = 'block'; // show matching projects
                 } else {
-                    project.style.display = 'none';
+                    project.style.display = 'none'; // hide non-matching
                 }
             });
             
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            buttons.forEach(btn => btn.classList.remove('active')); // reset buttons
+            event.target.classList.add('active'); // highlight clicked button
         }
     </script>
 </body>

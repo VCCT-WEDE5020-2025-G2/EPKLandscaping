@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Prevent caching to always show the latest version -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>EPK Landscaping - Contact</title>
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <!-- Navigation bar -->
         <nav>
             <div class="logo">
+                <!-- Logo / site name -->
                 <h1>🌱 EPK Landscaping</h1>
             </div>
             <ul class="nav-links">
+                <!-- Navigation links -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,20 +31,25 @@
     </header>
 
     <main>
+        <!-- Back to home button -->
         <div class="back-to-home">
             <a href="index.html" class="btn secondary">← Back to Home</a>
         </div>
 
+        <!-- Page header -->
         <section class="page-header">
             <h1>Contact Us</h1>
             <p>Get in touch for your free landscaping consultation</p>
         </section>
 
+        <!-- Main contact section -->
         <section class="contact-content">
+            <!-- Contact information column -->
             <div class="contact-info">
                 <h2>Get In Touch</h2>
                 <p>Ready to transform your outdoor space? Contact us today to schedule your free consultation!</p>
                 
+                <!-- Contact details items -->
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="icon">📞</div>
@@ -79,10 +89,12 @@
                 </div>
             </div>
 
+            <!-- Contact form column -->
             <div class="contact-form">
                 <div class="form-container">
                     <h2>📋 Request Your Free Quote</h2>
                     <form id="contactForm">
+                        <!-- First row: Name and Email -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -94,6 +106,7 @@
                             </div>
                         </div>
                         
+                        <!-- Second row: Phone and Service Interest -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
@@ -114,16 +127,19 @@
                             </div>
                         </div>
                         
+                        <!-- Message text area -->
                         <div class="form-group">
                             <label for="message">Project Details *</label>
                             <textarea id="message" name="message" rows="5" placeholder="Please describe your landscaping needs, property size, timeline, and any specific requirements..." required></textarea>
                         </div>
                         
+                        <!-- Newsletter subscription checkbox -->
                         <div class="form-group checkbox">
                             <input type="checkbox" id="newsletter" name="newsletter">
                             <label for="newsletter">I'd like to receive seasonal landscaping tips and special offers</label>
                         </div>
                         
+                        <!-- Submit button -->
                         <button type="submit" class="btn primary">📤 Send Message</button>
                         <small>We'll respond within 24 hours</small>
                     </form>
@@ -131,6 +147,7 @@
             </div>
         </section>
 
+        <!-- Quick contact section with direct options -->
         <section class="quick-contact">
             <h2>Prefer to Call or Text?</h2>
             <div class="quick-contact-options">
@@ -155,6 +172,7 @@
             </div>
         </section>
 
+        <!-- FAQ section -->
         <section class="faq">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-items">
@@ -178,6 +196,7 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -196,26 +215,32 @@
         </div>
     </footer>
 
+    <!-- Contact form validation script -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Prevent default form submission
             e.preventDefault();
             
+            // Get input values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
+            // Basic required field validation
             if (!name || !email || !message) {
                 alert('Please fill in all required fields!');
                 return;
             }
             
+            // Simple email format validation
             if (!email.includes('@')) {
                 alert('Please enter a valid email address!');
                 return;
             }
             
+            // Success message
             alert('Thank you ' + name + '! Your message has been received. We will contact you soon.');
-            this.reset();
+            this.reset(); // Reset form after submission
         });
     </script>
 </body>
