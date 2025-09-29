@@ -64,3 +64,5 @@ EPK Landscaping is a made up Business founded with a simple vision: to create be
 
 ## Sitemap
 <img width="874" height="316" alt="WEDE FRAME" src="https://github.com/user-attachments/assets/a7d61427-5b9a-4752-b0a9-51c9769b9692" />
+
+https://github.com/VCCT-WEDE5020-2025-G2/EPKLandscaping.git
