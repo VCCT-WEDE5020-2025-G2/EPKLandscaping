@@ -66,3 +66,7 @@ EPK Landscaping is a made up Business founded with a simple vision: to create be
 <img width="874" height="316" alt="WEDE FRAME" src="https://github.com/user-attachments/assets/a7d61427-5b9a-4752-b0a9-51c9769b9692" />
 
 https://github.com/VCCT-WEDE5020-2025-G2/EPKLandscaping.git
+## Changelog
+- replaced the emojies on the gome page and portfolio page to actual images 
+## Referencing
+- Houston Landscape Pros, 2010. At Houston Landscape Pros, we offer full-service landscaping in Houston, specializing in landscape design, 2010.Available at: https://houstonlandscapepros.com/ [[Accessed 26 october 2025]
